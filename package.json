@@ -43,6 +43,6 @@
     "@netlify/plugin-visual-editor": "^1.4.1",
 
 
-    "@stackbit/cli": "^0.20.0" // Keep this in devDependencies
+    "@stackbit/cli": "^0.20.0"
   }
 }
