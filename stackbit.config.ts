@@ -2,31 +2,38 @@ import { defineStackbitConfig } from '@stackbit/types';
 import { GitContentSource } from "@stackbit/cms-git";
 
 export default defineStackbitConfig({
+  // This stackbitVersion is important as it dictates the expected API behavior.
+  // Given the error, it seems to enforce 'models' in GitContentSource.
   stackbitVersion: '~0.6.0',
   ssgName: 'custom',
-  nodeVersion: '18',
+  nodeVersion: '18', // Ensure this matches your Netlify build environment (which it does)
   
   // Define where your content is stored using GitContentSource
   contentSources: [
     new GitContentSource({
-      rootPath: './content',
-      contentDirs: ['pages', 'products', 'services', 'blog'],
+      rootPath: './content', // Relative path from your project root to your content directory
+      contentDirs: ['pages', 'products', 'services', 'blog'], // Subdirectories within 'rootPath' where content files live
+      
+      // THIS LINE IS CRUCIAL AND WAS REQUIRED BY THE ERROR MESSAGE
+      // It specifies the names of the models that GitContentSource will manage.
+      models: ['page', 'product', 'service', 'post'], 
+      
       assetsConfig: {
-        referenceType: 'static',
-        staticDir: 'public',
-        uploadDir: 'images',
-        publicPath: '/images'
+        referenceType: 'static', // How assets are referenced (e.g., in markdown)
+        staticDir: 'public',     // Directory where static assets are stored (e.g., `public/images`)
+        uploadDir: 'images',     // Subdirectory within `staticDir` for uploaded assets
+        publicPath: '/images'    // Public URL path for accessing these assets
       }
     })
   ],
   
-  // Define your content models
+  // Define your content models (the schema for your Markdown files)
   models: {
     // Main pages model
     page: {
-      type: 'page',
-      urlPath: '/{slug}',
-      filePath: 'content/pages/{slug}.md',
+      type: 'page', // Stackbit's internal type for pages
+      urlPath: '/{slug}', // URL pattern for Next.js to use (e.g., /about, /contact)
+      filePath: 'content/pages/{slug}.md', // Path pattern to your Markdown files
       fields: [
         {
           name: 'title',
@@ -40,21 +47,22 @@ export default defineStackbitConfig({
           label: 'Meta Description'
         },
         {
-          name: 'layout',
+          name: 'layout', // Often used by SSGs to select a layout component
           type: 'string',
           default: 'page',
           hidden: true
         },
         {
           name: 'body',
-          type: 'markdown',
+          type: 'markdown', // Stackbit will provide a Markdown editor for this field
           label: 'Page Content'
         }
       ]
     },
-    // Products model - based on your HTML files
+    
+    // Products model
     product: {
-      type: 'page',
+      type: 'page', // Products are also considered pages in terms of URL generation
       urlPath: '/products/{slug}',
       filePath: 'content/products/{slug}.md',
       fields: [
@@ -121,6 +129,7 @@ export default defineStackbitConfig({
         }
       ]
     },
+    
     // Services model
     service: {
       type: 'page',
@@ -158,8 +167,9 @@ export default defineStackbitConfig({
         }
       ]
     },
+    
     // Blog posts model
-    post: {
+    post: { // Changed from 'blog' to 'post' to match typical naming conventions for individual blog articles.
       type: 'page',
       urlPath: '/blog/{slug}',
       filePath: 'content/blog/{slug}.md',
@@ -208,21 +218,21 @@ export default defineStackbitConfig({
     }
   },
   
-  // Define the dev command for local development
+  // Define the dev command for local development (used by 'stackbit dev')
   devCommand: 'npm run dev',
   
-  // Build settings
+  // Build settings for your SSG (Next.js in this case)
   buildCommand: 'npm run build',
-  publishDir: './',
+  publishDir: './out', // Next.js 'next export' outputs to 'out' by default
   
-  // Define how content maps to your site
+  // Presets (optional, for Stackbit's own internal management)
   presets: [
     {
       name: 'default',
       label: 'Default',
       metadata: {
         created_by: 'stackbit',
-        created_at: '2025-01-01T00:00:00.000Z'
+        created_at: '2025-01-01T00:00:00.000Z' // Placeholder date
       }
     }
   ]
