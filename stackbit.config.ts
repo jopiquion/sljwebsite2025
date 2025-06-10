@@ -2,7 +2,7 @@ import { defineStackbitConfig } from '@stackbit/types';
 import { GitContentSource } from "@stackbit/cms-git";
 
 export default defineStackbitConfig({
-  stackbitVersion: '~0.7.0', // Keeping this at 0.7.0 as it seems to be accepted for overall config schema
+  stackbitVersion: '~0.7.0', 
   ssgName: 'custom',
   nodeVersion: '18',
   
@@ -11,12 +11,10 @@ export default defineStackbitConfig({
       rootPath: './content',
       contentDirs: ['pages', 'products', 'services', 'blog'],
       
-      // Here, we define the models directly within the GitContentSource array
-      // This is often required by newer Stackbit SDK versions that use strict typing
-      // and want the 'name' property directly on the model object being passed.
+      // Models array for GitContentSource still requires 'name'
       models: [
         {
-          name: 'page', // Explicitly define the name here
+          name: 'page', // KEEP name here
           type: 'page',
           urlPath: '/{slug}',
           filePath: 'content/pages/{slug}.md',
@@ -28,7 +26,7 @@ export default defineStackbitConfig({
           ]
         },
         {
-          name: 'product', // Explicitly define the name here
+          name: 'product', // KEEP name here
           type: 'page',
           urlPath: '/products/{slug}',
           filePath: 'content/products/{slug}.md',
@@ -68,7 +66,7 @@ export default defineStackbitConfig({
           ]
         },
         {
-          name: 'service', // Explicitly define the name here
+          name: 'service', // KEEP name here
           type: 'page',
           urlPath: '/services/{slug}',
           filePath: 'content/services/{slug}.md',
@@ -86,7 +84,7 @@ export default defineStackbitConfig({
           ]
         },
         {
-          name: 'post', // Explicitly define the name here
+          name: 'post', // KEEP name here
           type: 'page',
           urlPath: '/blog/{slug}',
           filePath: 'content/blog/{slug}.md',
@@ -109,12 +107,10 @@ export default defineStackbitConfig({
     })
   ],
   
-  // The top-level models object still needs to be defined, but now
-  // we're referencing the models by the 'name' property defined above,
-  // making the structure flat here.
+  // The top-level models object: REMOVE 'name' property from these definitions.
   models: {
     page: {
-      name: 'page', // Keep the name property here too
+      // REMOVE: name: 'page',
       type: 'page',
       urlPath: '/{slug}',
       filePath: 'content/pages/{slug}.md',
@@ -127,7 +123,7 @@ export default defineStackbitConfig({
     },
     
     product: {
-      name: 'product', // Keep the name property here too
+      // REMOVE: name: 'product',
       type: 'page',
       urlPath: '/products/{slug}',
       filePath: 'content/products/{slug}.md',
@@ -168,7 +164,7 @@ export default defineStackbitConfig({
     },
     
     service: {
-      name: 'service', // Keep the name property here too
+      // REMOVE: name: 'service',
       type: 'page',
       urlPath: '/services/{slug}',
       filePath: 'content/services/{slug}.md',
@@ -187,7 +183,7 @@ export default defineStackbitConfig({
     },
     
     post: {
-      name: 'post', // Keep the name property here too
+      // REMOVE: name: 'post',
       type: 'page',
       urlPath: '/blog/{slug}',
       filePath: 'content/blog/{slug}.md',
