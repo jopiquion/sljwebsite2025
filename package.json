@@ -18,9 +18,9 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
 
-    "@stackbit/types": "~0.6.0",
-    "@stackbit/cms-git": "^0.2.0",
-    "@stackbit/dev": "^0.20.0", 
+    "@stackbit/types": "^2.1.14"
+    "@stackbit/cms-git": "^1.0.35"
+    "@stackbit/dev": "^2.2.35"
 
     "gray-matter": "^4.0.3",
     "remark": "^15.0.1", 
