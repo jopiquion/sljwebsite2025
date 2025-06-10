@@ -5,8 +5,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export", 
-    "start": "next start", 
+    "build": "next build && next export",
+    "start": "next start",
     "lint": "next lint",
     "stackbit": "stackbit dev"
   },
@@ -14,7 +14,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "next": "^14.2.4", 
+    "next": "^14.2.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
 
@@ -23,33 +23,21 @@
     "@stackbit/dev": "^2.2.35",
 
     "gray-matter": "^4.0.3",
-    "remark": "^15.0.1", 
+    "remark": "^15.0.1",
     "remark-html": "^16.0.1"
-
-
   },
   "devDependencies": {
-    
-    "typescript": "^5.4.5", 
-    "@types/node": "^20.14.2", 
+    "typescript": "^5.4.5",
+    "@types/node": "^20.14.2",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
 
-  
     "eslint": "^8.57.0",
     "eslint-config-next": "14.2.4",
 
- 
     "@netlify/plugin-visual-editor": "^1.4.1",
-    "@stackbit/cms-git": "^1.0.35",
-    "@stackbit/types": "^2.1.14",
-    "blockit-builder": "^3.2.6",
-    "gray-matter": "^4.0.3",
-    "markdown-it": "^13.0.0"
-
-
-
+    "blockit-builder": "^3.2.6",    
+    "markdown-it": "^13.0.0",        
     "@stackbit/cli": "^0.3.133"
-
   }
 }
