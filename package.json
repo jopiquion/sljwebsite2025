@@ -1,26 +1,57 @@
 {
-  "name": "your-project-name",
+  "name": "your-nextjs-stackbit-project",
   "version": "1.0.0",
-  "description": "Your project description",
-  "main": "index.js",
+  "description": "A Next.js site with Stackbit content management.",
+  "private": true,
   "scripts": {
-    "dev": "YOUR_SSG_DEV_COMMAND",
-    "build": "YOUR_SSG_BUILD_COMMAND",
+    "dev": "next dev",
+    "build": "next build && next export", # next export is crucial for static deployment
+    "start": "next start", # For running a production build locally
+    "lint": "next lint",
     "stackbit": "stackbit dev"
   },
-  "keywords": [],
+  "keywords": ["nextjs", "react", "stackbit", "static-site", "markdown", "typescript"],
   "author": "",
   "license": "MIT",
   "dependencies": {
+    // Next.js and React Core
+    "next": "^14.2.4", // Use a recent stable version
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+
+    // Stackbit Core and Content Source
     "@stackbit/types": "~0.6.0",
-    "@stackbit/cms-git": "^0.2.0"
-    // Add any dependencies required by your SSG or custom build process here
-    // e.g., "next": "^14.0.0", "react": "^18.0.0", etc.
+    "@stackbit/cms-git": "^0.2.0",
+    "@stackbit/dev": "^0.20.0", // Ensure this is present if indicated in your logs
+
+    // Markdown Handling (common for Next.js + Markdown content)
+    "gray-matter": "^4.0.3", // For parsing front matter from Markdown files
+    "remark": "^15.0.1", // For converting Markdown to HTML
+    "remark-html": "^16.0.1", // Specific plugin to convert Markdown to HTML
+
+    // Other utilities you might be using implicitly for HTML/CSS/JS features
+    // "fina": "^x.x.x", // If 'fina' is a specific library, specify its version.
+                         // This is not a standard widely known npm package.
+                         // Please verify what 'fina' refers to.
+    // "blockit": "^x.x.x" // Similar to 'fina', if this is a specific library, specify its version.
+                         // Not a standard widely known npm package.
+                         // Please verify what 'blockit' refers to.
   },
   "devDependencies": {
-    "@netlify/plugin-visual-editor": "^1.x.x",
-    "@stackbit/cli": "^0.x.x",
-    // Add any dev dependencies required by your SSG or custom build process here
-    // e.g., "typescript": "^5.0.0" if your stackbit.config.ts is TypeScript
+    // TypeScript
+    "typescript": "^5.4.5", // Use a recent stable version
+    "@types/node": "^20.14.2", // For Node.js types in TypeScript
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+
+    // Next.js Linting
+    "eslint": "^8.57.0",
+    "eslint-config-next": "14.2.4",
+
+    // Netlify Plugin
+    "@netlify/plugin-visual-editor": "^1.4.1",
+
+    // Stackbit CLI (for local 'stackbit dev' command)
+    "@stackbit/cli": "^0.20.0" // Keep this in devDependencies
   }
 }
