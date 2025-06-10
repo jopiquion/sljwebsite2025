@@ -1,29 +1,26 @@
 {
-  "name": "fina",
-  "title": "Fina",
-  "version": "2.0.0",
-  "description": "Investment and Forex HTML Template",
-  "private": true,
+  "name": "your-project-name",
+  "version": "1.0.0",
+  "description": "Your project description",
+  "main": "index.js",
   "scripts": {
-    "build": "node build.js",
-    "dev": "npm run build && npx serve .",
-    "blockit": "node ./node_modules/blockit-builder/blockit.js"
+    "dev": "YOUR_SSG_DEV_COMMAND",
+    "build": "YOUR_SSG_BUILD_COMMAND",
+    "stackbit": "stackbit dev"
   },
-  "author": "mudza09",
-  "license": "MIT",
-  "main": "backup script.js",
   "keywords": [],
+  "author": "",
+  "license": "MIT",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "6.4.0",
-    "share-buttons": "1.9.0",
-    "uikit": "3.16.17"
+    "@stackbit/types": "~0.6.0",
+    "@stackbit/cms-git": "^0.2.0"
+    // Add any dependencies required by your SSG or custom build process here
+    // e.g., "next": "^14.0.0", "react": "^18.0.0", etc.
   },
   "devDependencies": {
-    "@netlify/plugin-visual-editor": "^1.4.1",
-    "@stackbit/cms-git": "^1.0.35",
-    "@stackbit/types": "^2.1.14",
-    "blockit-builder": "^3.2.6",
-    "markdown-it": "^13.0.0",
-    "gray-matter": "^4.0.3"
+    "@netlify/plugin-visual-editor": "^1.x.x",
+    "@stackbit/cli": "^0.x.x",
+    // Add any dev dependencies required by your SSG or custom build process here
+    // e.g., "typescript": "^5.0.0" if your stackbit.config.ts is TypeScript
   }
 }
