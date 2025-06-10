@@ -1,10 +1,10 @@
 {
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
   "/_error": "pages/_error.js",
-  "/blog/[slug]": "pages/blog/[slug].js",
+  "/": "pages/index.js",
+  "/[slug]": "pages/[slug].js",
   "/products/[slug]": "pages/products/[slug].js",
-  "/services/[slug]": "pages/services/[slug].js",
-  "/[slug]": "pages/[slug].js"
+  "/blog/[slug]": "pages/blog/[slug].js",
+  "/services/[slug]": "pages/services/[slug].js"
 }
