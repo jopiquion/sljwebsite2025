@@ -16,6 +16,11 @@
     "uikit": "3.16.17"
   },
   "devDependencies": {
+    "@netlify/plugin-visual-editor": "^1.4.1",
+    "@stackbit/cms-git": "^1.0.35",
+    "@stackbit/types": "^2.1.14",
     "blockit-builder": "^3.2.6"
-  }
+  },
+  "main": "backup script.js",
+  "keywords": []
 }
