@@ -6,15 +6,21 @@ export default defineStackbitConfig({
   ssgName: 'custom',
   nodeVersion: '18',
   
-  // Define where your content is stored
+  // Define where your content is stored using GitContentSource
   contentSources: [
-    {
-      name: 'local',
-      type: 'file',
-      rootPath: './content'
-    }
+    new GitContentSource({
+      rootPath: './content',
+      contentDirs: ['pages', 'products', 'services', 'blog'],
+      models: ['page', 'product', 'service', 'post'],
+      assetsConfig: {
+        referenceType: 'static',
+        staticDir: 'public',
+        uploadDir: 'images',
+        publicPath: '/images'
+      }
+    })
   ],
-
+  
   // Define your content models
   models: {
     // Main pages model
@@ -47,7 +53,6 @@ export default defineStackbitConfig({
         }
       ]
     },
-
     // Products model - based on your HTML files
     product: {
       type: 'page',
@@ -117,7 +122,6 @@ export default defineStackbitConfig({
         }
       ]
     },
-
     // Services model
     service: {
       type: 'page',
@@ -155,7 +159,6 @@ export default defineStackbitConfig({
         }
       ]
     },
-
     // Blog posts model
     post: {
       type: 'page',
@@ -205,7 +208,7 @@ export default defineStackbitConfig({
       ]
     }
   },
-
+  
   // Define the dev command for local development
   devCommand: 'npm run dev',
   
