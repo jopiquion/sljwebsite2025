@@ -22,7 +22,7 @@
     "@stackbit/cms-git": "^0.2.0",
     "@stackbit/dev": "^0.20.0", 
 
-    "gray-matter": "^4.0.3", s
+    "gray-matter": "^4.0.3",
     "remark": "^15.0.1", 
     "remark-html": "^16.0.1", 
 
