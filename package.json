@@ -38,6 +38,6 @@
     "@netlify/plugin-visual-editor": "^1.4.1",
     "blockit-builder": "^3.2.6",
     "markdown-it": "^13.0.0",
-    "@stackbit/cli": "^0.6.0"     
+    "@stackbit/cli": "^0.3.133"     
   }
 }
