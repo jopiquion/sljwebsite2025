@@ -1,0 +1,66 @@
+stackbitVersion: ~0.6.0 # Use the Stackbit version your project expects
+ssg: nextjs
+build:
+  # ... (your build settings, usually already there)
+  publishDir: out
+
+models:
+  # Define a 'Page' model for your general content pages (like steel, sugar, etc.)
+  - type: page
+    name: Page # The name of the model (what you'll use in 'type: Page')
+    label: Page
+    urlPath: '/{slug}' # How pages of this type will form their URL (using the slug)
+    filePath: 'content/pages/{slug}.md' # Where the content files are stored
+    hideContent: false # If true, the Markdown content area won't be editable in CMS
+    fields:
+      - type: string
+        name: title
+        label: Title
+        required: true
+      - type: string
+        name: description
+        label: Description
+        required: false
+        
+  # Define a 'Product' model for your product pages
+  - type: data
+    name: Product # Use 'data' type if it's not a direct URL page but content for a dynamic page
+    label: Product
+    filePath: 'content/products/{slug}.md' # Where product files are stored
+    fields:
+      - type: string
+        name: title
+        label: Title
+        required: true
+      - type: string
+        name: price
+        label: Price
+      # ... other product-specific fields
+
+  # Define a 'Service' model for your service pages
+  - type: data
+    name: Service
+    label: Service
+    filePath: 'content/services/{slug}.md'
+    fields:
+      - type: string
+        name: title
+        label: Title
+        required: true
+      # ... other service-specific fields
+
+  # Define a 'BlogPost' model for your blog posts
+  - type: page
+    name: BlogPost
+    label: Blog Post
+    urlPath: '/blog/{slug}'
+    filePath: 'content/blog/{slug}.md'
+    fields:
+      - type: string
+        name: title
+        label: Title
+        required: true
+      - type: date
+        name: date
+        label: Date
+      # ... other blog post fields
