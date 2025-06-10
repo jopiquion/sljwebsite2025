@@ -11,9 +11,9 @@
 
   # Specify the Node.js version for Netlify's build environment.
   # This helps ensure consistency with your local development environment
-  # and the version specified in stackbit.config.ts (nodeVersion: '18').
-[build.environment]
-  NODE_VERSION = "18"
+  # and the version specified in stackbit.config.ts (nodeVersion: '20').
+  [build.environment]
+    NODE_VERSION = "20"
 
 # Configuration for the Netlify Visual Editor plugin.
 # This plugin integrates Stackbit's visual editing capabilities with your site.
@@ -33,14 +33,14 @@
 # You can add other Netlify configurations here if needed, for example:
 #
 # [[headers]]
-#   for = "/*"
-#     [headers.values]
-#       X-Frame-Options = "DENY"
-#       X-Content-Type-Options = "nosniff"
-#       X-XSS-Protection = "1; mode=block"
-#       Referrer-Policy = "no-referrer-when-downgrade"
+#    for = "/*"
+#      [headers.values]
+#        X-Frame-Options = "DENY"
+#        X-Content-Type-Options = "nosniff"
+#        X-XSS-Protection = "1; mode=block"
+#        Referrer-Policy = "no-referrer-when-downgrade"
 #
 # [[headers]]
-#   for = "/images/*"
-#     [headers.values]
-#       Cache-Control = "public, max-age=31536000" # Cache images for a year
+#    for = "/images/*"
+#      [headers.values]
+#        Cache-Control = "public, max-age=31536000" # Cache images for a year
