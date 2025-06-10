@@ -3,7 +3,7 @@
 
 <head>
 	<!-- meta tags -->
-	<meta charset="utf-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="SLJ Trading Company LLC connects buyers and sellers in global commodities like sugar, chicken paws, and minerals. Trust our expertise for reliable sourcing and trade financing.">
 <meta name="keywords" content="SLJ Trading Company, global commodity trading, agro commodities, sugar export, rice export, rare earth metals trading, steel import, iron ore suppliers, international trade company">
@@ -12,7 +12,7 @@
 <meta name="robots" content="index, follow">
 <meta property="og:title" content="SLJ Trading Company - Global Commodity Trading Experts">
 <meta property="og:description" content="SLJ Trading Company LLC connects buyers and sellers in global commodities like sugar, chicken paws, and minerals. Trust our expertise for reliable sourcing and trade financing.">
-<meta property="og:image" content="https://sljtradingcompany.com/pics/slj-logo.png">
+<meta property="og:image" content="https://sljtradingcompany.b-cdn.net/pics/slj-logo.png">
 <meta property="og:url" content="https://sljtradingcompany.com.com">
 <meta property="og:type" content="website">
 <link rel="icon" href="https://sljtradingcompany.b-cdn.net/pics/slj-favicon.ico" type="image/x-icon">
@@ -25,40 +25,351 @@
 	<link rel="preload" href="fonts/mulish-v3-latin-800.woff2" as="font" type="font/woff2" crossorigin>
 	<link rel="preload" href="fonts/roboto-v20-latin-300.woff2" as="font" type="font/woff2" crossorigin>
 	<link rel="preload" href="css/style.css" as="style">
+
 	<link rel="preload" href="js/vendors/uikit.min.js" as="script">
 	<link rel="preload" href="js/utilities.min.js" as="script">
 	<link rel="preload" href="js/config-theme.js" as="script">
 	<!-- stylesheet -->
 		<link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="./style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 	<!-- uikit -->
 	<script src="js/vendors/uikit.min.js"></script>
 	<!-- favicon -->
 	<link rel="shortcut icon" href="https://sljtradingcompany.b-cdn.net/pics/slj-favicon.ico" type="image/x-icon">
 	<!-- touch icon -->
 	<link rel="shortcut icon" href="https://sljtradingcompany.b-cdn.net/pics/slj-apple-touch-icon.png" type="image/x-icon">
-	<title>Trade Financing - SLJ Trading Company</title>
+	<title>{{PAGE_TITLE}} - SLJ Trading Company</title>
+
+	<script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@type": "Organization",
+		  "name": "SLJ Trading Company",
+		  "url": "https://sljtradingcompany.com/",
+		  "logo": "https://sljtradingcompany.b-cdn.net/pics/slj-logo.png", 
+      "description": "SLJ Trading Company specializes in providing high-quality trading services, including import and export of goods, wholesale trading, and supply chain management solutions. Our mission is to connect businesses with reliable global trading partners.",
+      "contactPoint": {
+			"@type": "ContactPoint",
+			"telephone": "+1-305-939-5154", 
+			"contactType": "Customer Service",
+			"areaServed": "US",
+			"availableLanguage": ["English"]
+		  },
+		  "address": {
+			"@type": "PostalAddress",
+			"streetAddress": "848 Brickell Ave, Penthouse 5",
+			"addressLocality": "Miami",
+			"addressRegion": "FL",
+			"postalCode": "33131",
+			"addressCountry": "US"
+		  },
+		  "sameAs": [
+			"https://facebook.com/yourcompany",
+			"https://instagram.com/yourcompany",
+			"https://linkedin.com/in/yourcompany"
+		  ]
+		}
+		</script>
+
+		<style>
+.fullscreen-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;
+  background-color: black;
+}
+
+.fullscreen-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  z-index: 100;
+  transition: background-color 0.3s;
+}
+
+.fullscreen-btn:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Button Styles */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: #6C8E76;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.button:hover {
+  background: #5C7D66;
+  color: white;
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.learn-more {
+  background: #006400;
+}
+
+.learn-more:hover {
+  background: #004d00;
+}
+
+/* Header Fonts */
+.header-font {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #6C8E76;
+  margin-bottom: 20px;
+}
+
+/* Card Styles */
+.card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+.card-header {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #6C8E76;
+  margin-bottom: 15px;
+}
+
+.card-font {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Featured Products Styles */
+.featured-products {
+  padding: 60px 5%;
+  background: #ffffff;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.product-highlight {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 60px;
+  text-decoration: none;
+}
+
+.product-highlight.reverse {
+  flex-direction: row-reverse;
+}
+
+.product-highlight img {
+  width: 50%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.product-content {
+  width: 50%;
+  padding: 20px;
+}
+
+.product-content h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #6C8E76;
+  margin-bottom: 15px;
+}
+
+.product-content p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Animation Classes */
+.fade-in-right, .fade-in-left {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.8s ease-out;
+}
+
+.fade-in-left {
+  transform: translateX(-50px);
+}
+
+.fade-in-right.visible, .fade-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Services Section */
+.services-section {
+  padding: 60px 5%;
+  background: #ffffff;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.service {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.service img {
+  width: 50%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+.service-text {
+  width: 50%;
+  text-align: left;
+  transform: translateX(50px);
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+.service-text h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.service-text p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+/* Blog Signup */
+.blog-signup {
+  padding: 40px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+/* Footer Styles */
+.footer-built-by {
+  background-color: #5C7D66;
+  text-align: center;
+  padding: 10px 0;
+  color: white;
+  font-size: 14px;
+}
+
+.footer-built-by strong {
+  color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .product-highlight, .product-highlight.reverse {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  
+  .product-highlight img, .product-content {
+    width: 90%;
+  }
+  
+  .service {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  
+  .service img {
+    width: 80%;
+    max-height: 160px;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .service-text {
+    width: 90%;
+    text-align: center;
+    transform: translateX(0);
+  }
+  
+  .header-font {
+    font-size: 1.5rem;
+  }
+}
+		</style>
+
 </head>
+<style>			
+	body {background-color: white;}
+</style>
 
 <body>
-	<!-- page loader begin 
-	<div class="page-loader">
-		<div></div>
-		<div></div>
-		<div></div>
-	</div>
-	page loader end -->
 	<!-- header begin -->
-	<header>
+<header>
 		<div class="uk-section uk-section-default uk-padding-remove-vertical uk-background-contain uk-background-top-left" style="background-image: url(img/in-header-background.png);">
 				<div class="uk-container">
 					<div class="uk-child-width-1-2@s in-top-header" data-uk-grid>
 						<div class="uk-flex uk-flex-center uk-flex-left@s">
 							<a class="uk-logo" href="index.html">
-								<img src="https://sljtradingcompany.b-cdn.net/pics/slj-logo.png" alt="logo" width="190" height="auot" data-uk-img style="margin-bottom: -10px; margin-top: 10px">
+								<img src="https://sljtradingcompany.b-cdn.net/pics/slj-logo.png" alt="logo" width="190" height="auto" data-uk-img style="margin-bottom: -10px; margin-top: 10px">
 							</a>
 						</div>
-						
 					</div>
 					<hr>
 				</div>
@@ -66,165 +377,139 @@
 					<div class="uk-container" data-uk-navbar>
 						<div class="uk-navbar-left uk-visible@m">
 							<ul class="uk-navbar-nav">
-<li><a href="index.html">Home</a></li>
+								<li><a href="index.html">Home</a></li>
 								<li><a href="about.html">About</a></li>
-						  <li><a href="products.html">Products</a></li>
-						  <li><a href="services.html">Services</a></li>
-              <li><a href="blog.html">Blog</a></li>
-						  <li><a href="critical-strategic-minerals.html">Critical & Strategic Minerals</a></li>                 
-						  <li><a href="products-of-india.html">Products of India</a></li>                 
-
-						  <li><a href="contact.html">Contact</a></li>                 
-				  <li><a href="faq.html">FAQs</a></li>
+								<li><a href="products.html">Products</a></li>
+								<li><a href="services.html">Services</a></li>
+								<li><a href="blog.html">Blog</a></li>
+								<li><a href="critical-strategic-minerals.html">Critical & Strategic Minerals</a></li>                 
+								<li><a href="products-of-india.html">Products of India</a></li>                 
+								<li><a href="contact.html">Contact</a></li>                 
+								<li><a href="faq.html">FAQs</a></li>
 							</ul>
 						</div>
 						<div class="uk-navbar-right" data-logo-inverse="filename: slj-logo.png; width: 70; height: 70; inject: true">
-							
 						</div>
 					</div>
 				</nav>
 			</div>
 		</header>
 	<!-- header end -->
-     
-    <main class="product-page">
-    <div class="container">
-        <!-- Hero Section with Banner Image -->
-        <section class="hero-section" style="text-align: center;">
-            <h1 style="font-family: Montserrat, serif; color: #6C8E76" class="section-title header-font" style="color: #6C8E76;">Petroleum Products: Powering Global Progress</h1>
+	
+	<main>
+		<!-- PAGE CONTENT PLACEHOLDER -->
+		{{MAIN_CONTENT}}
+		<!-- END PAGE CONTENT PLACEHOLDER -->
+	</main>
 
-        </section>
+	<!-- footer begin -->
+	<footer>
+		<div class="uk-section uk-light uk-margin-medium-top uk-background-contain uk-background-bottom-left" style="background-image: url(img/in-footer-background.png); background-color: #6C8E76;" >
+			<div class="uk-container uk-margin-top">
+				<div class="uk-grid" data-uk-grid="">
+					<div class="uk-width-1-1 uk-width-expand@m">
+						<div class="uk-child-width-1-3@s uk-margin-bottom" data-uk-grid="">
+							<div>
+								<ul class="uk-list">
+									<li><a href="privacy.html">Privacy Policy</a></li>
+									<li><a href="cookies.html">Cookie Policy</a></li>
+									<li><a href="terms.html">Terms &amp; Conditions</a></li>
+									<li><a href="faq.html">FAQ</a></li>
+								</ul>
+							</div>
+							<div>
+								<ul class="uk-list">
+									<li><a href="trade-financing.html">Trade Financing</a></li>
+									<li><a href="products.html">Products</a></li>
+									<li><a href="services.html">Services</a></li>
+									<li><a href="contact.html">Contact Us</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="uk-width-1-1 uk-width-auto@m">
+						<div class="uk-flex uk-flex-left uk-flex-right@m">
+							<!-- social media begin -->
+							<div class="uk-flex social-media-list">
+								<div><a href="https://www.facebook.com/indonez" class="color-facebook text-decoration-none"><i class="fab fa-facebook-square"></i> Facebook</a></div>
+								<div><a href="https://twitter.com/indonez_tw" class="color-twitter text-decoration-none"><i class="fab fa-x"></i> X</a></div>
+								<div><a href="https://www.instagram.com/indonez_ig" class="color-instagram text-decoration-none"><i class="fab fa-instagram"></i> Instagram</a></div>
+								<div><a href="#some-link" class="color-youtube text-decoration-none"><i class="fab fa-youtube"></i> Youtube</a></div>
+							</div>
+							<!-- social media end -->
+						</div>
+					</div>
+				</div>
+				<div class="uk-grid uk-margin-large-top uk-margin-bottom">
+					<div class="uk-width-1-1">
+						<p class="uk-heading-line uk-margin-medium-bottom copyright-text"><span>Copyright ©2025 SLJ TRADING COMPANY LLC. All Rights Reserved.</span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-built-by">
+			<p>Proudly Built by <strong>Douvo Edge</strong></p>
+		</div>
+	</footer>
+	<!-- footer end -->
+	
+	<!-- to top begin -->
+	<a href="#" class="to-top uk-visible@m" data-uk-scroll style="background-color: #6C8E76; border: solid 1px white;">
+		Top<i class="fas fa-chevron-up" style="color: white"></i>
+	</a>
+	<!-- to top end -->
+	
+	<!-- javascript -->
+	<script src="js/utilities.min.js"></script>
+	<script src="js/config-theme.js"></script>
+	<script src="script.js"></script>
 
-        <div class="parallax-image" style="background-image: url('https://sljtradingcompany.b-cdn.net/pics/refinery-at-night-2023-11-27-05-30-06-utc.jpg');"></div>
+	<!-- Animation Scripts -->
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+			// Intersection Observer for fade-in animations
+			const observerOptions = {
+				root: null,
+				rootMargin: "0px",
+				threshold: 0.2,
+			};
 
+			const observer = new IntersectionObserver((entries, observer) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						const elements = entry.target.querySelectorAll(".fade-in-right, .fade-in-left");
+						elements.forEach((el, index) => {
+							setTimeout(() => {
+								el.classList.add("visible");
+							}, index * 500);
+						});
+						observer.unobserve(entry.target);
+					}
+				});
+			}, observerOptions);
 
-        <!-- Introduction Section -->
-        <section class="intro-section" style="display: flex; gap: 20px; margin-top: 20px;">
-            <div class="text-section" style="flex: 1;">
-                <p style="color: black;">
-                    At SLJ Trading Company LLC, energy isn’t just fuel—it’s the lifeblood of industries and nations. 
-                    With direct access to trusted refineries, we offer premium petroleum products that keep businesses running smoothly, efficiently, and securely.
-                </p>
-            </div>
-            
-        </section>
+			// Observe product highlights
+			const highlights = document.querySelectorAll(".product-highlight");
+			highlights.forEach((highlight) => observer.observe(highlight));
 
-        <!-- Product Offerings Section -->
-        <section class="offerings-section">
-            <h2 style="font-family: Montserrat, serif; color: #6C8E76" style="color: #6C8E76;">Our Petroleum Offerings</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
-                <div class="offering-item">
-                    <img src="https://sljtradingcompany.b-cdn.net/pics/refinery-at-night-2023-11-27-05-30-06-utc.jpg" width="250" height="150" alt="Diesel">
-                    <p><strong>Diesel (D2, EN590, ULSD)</strong><br>High-grade diesel for transport, industrial machinery, and power generation.</p>
-                </div>
-                <div class="offering-item">
-                    <img src="https://sljtradingcompany.b-cdn.net/pics/refinery-at-night-2023-11-27-05-30-06-utc.jpg" width="250" height="150"  alt="Jet Fuel">
-                    <p><strong>Jet Fuel (A1, JP54)</strong><br>Clean-burning fuel designed for optimal aircraft efficiency.</p>
-                </div>
-                <div class="offering-item">
-                    <img src="https://sljtradingcompany.b-cdn.net/pics/refinery-at-night-2023-11-27-05-30-06-utc.jpg" width="250" height="150"  alt="Gasoline">
-                    <p><strong>Gasoline</strong><br>Unleaded and premium-grade gasoline for vehicles and industrial engines.</p>
-                </div>
-                <div class="offering-item">
-                    <img src="https://sljtradingcompany.b-cdn.net/pics/refinery-at-night-2023-11-27-05-30-06-utc.jpg" width="250" height="150"  alt="LNG">
-                    <p><strong>Liquefied Natural Gas (LNG)</strong><br>A cleaner energy solution for industrial and power plants.</p>
-                </div>
-            </div>
-        </section>
+			// Observe service sections
+			const hiddenElements = document.querySelectorAll(".hidden");
+			const serviceObserver = new IntersectionObserver(
+				(entries) => {
+					entries.forEach((entry) => {
+						if (entry.isIntersecting) {
+							entry.target.classList.add("show");
+						}
+					});
+				},
+				{ threshold: 0.2 }
+			);
 
-        <!-- Tailored Solutions Section -->
-        <section>
-            <h2 style="font-family: Montserrat, serif; color: #6C8E76" style="color: #6C8E76;">Tailored Solutions for Knowledgeable Buyers</h2>
-            <p style="color: black;">
-                With years of experience in commodities, we understand that every client’s needs are unique. Whether you require spot purchases or long-term supply arrangements, we ensure that your needs are met with precision and discretion.
-            </p>
-        </section>
-
-        <!-- Why Partner with Us Section -->
-        <section>
-            <h2 style="font-family: Montserrat, serif; color: #6C8E76" style="color: #6C8E76;">Why Partner with Us?</h2>
-            <ul style="color: black; list-style-type: none;">
-                <li>Direct refinery access ensures reliable sourcing</li>
-                <li>Flexible contracts to meet your project timelines</li>
-                <li>On-time, secure deliveries worldwide</li>
-                <li>Full product certification, including SGS and ISO</li>
-            </ul>
-        </section>
-
-        <!-- Call to Action -->
-        <section style="text-align: center; margin-top: 40px;">
-            <p style="color: black;">
-                📞 <a href="tel:+13059395154" style="text-decoration: none; color:#6C8E76"> +1 305 939 5154</a><br>
-                📧 <a href="mailto:stanley@sljtradingcompany.com" style="text-decoration: none; color:#6C8E76">stanley@sljtradingcompany.com</a><br>
-                🌐 <a href="https://www.sljtradingcompany.com" style="text-decoration: none; color:#6C8E76">www.sljtradingcompany.com</a>
-            </p>
-        </section>
-    </div>
-</main>
-
-<!-- footer begin -->
-<footer>
-    <div class="uk-section uk-light uk-margin-medium-top uk-background-contain uk-background-bottom-left" style="background-image: url(img/in-footer-background.png); background-color: #6C8E76;" >
-        <div class="uk-container uk-margin-top">
-            <div class="uk-grid" data-uk-grid="">
-                <div class="uk-width-1-1 uk-width-expand@m">
-                    <div class="uk-child-width-1-3@s uk-margin-bottom" data-uk-grid="">
-                        
-                        <div>
-                            <ul class="uk-list">
-                                <li><a href="privacy.html">Privacy Policy</a></li>
-                                <li><a href="cookies.html">Cookie Policy</a></li>
-                                <li><a href="terms.html">Terms &amp; Conditions</a></li>
-                                <li><a href="faq.html">FAQ</a></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <ul class="uk-list">
-                                <li><a href="trade-financing.html">Trade Financing</a></li>
-                                <li><a href="products.html">Products</a></li>
-                                <li><a href="services.html">Services</a></li>
-                                <li><a href="contact.html">Contact Us</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="uk-width-1-1 uk-width-auto@m">
-                    <div class="uk-flex uk-flex-left uk-flex-right@m">
-                        <!-- social media begin -->
-                        <div class="uk-flex social-media-list">
-                            <div><a href="https://www.facebook.com/indonez" class="color-facebook text-decoration-none"><i class="fab fa-facebook-square"></i> Facebook</a></div>
-                            <div><a href="https://twitter.com/indonez_tw" class="color-twitter text-decoration-none"><i class="fab fa-x"></i> X</a></div>
-                            <div><a href="https://www.instagram.com/indonez_ig" class="color-instagram text-decoration-none"><i class="fab fa-instagram"></i> Instagram</a></div>
-                            <div><a href="#some-link" class="color-youtube text-decoration-none"><i class="fab fa-youtube"></i> Youtube</a></div>
-                        </div>
-                        <!-- social media end -->
-                    </div>
-                    
-                </div>
-            </div>
-            <div class="uk-grid uk-margin-large-top uk-margin-bottom">
-                <div class="uk-width-1-1">
-                    
-                    <p class="uk-heading-line uk-margin-medium-bottom copyright-text"><span>Copyright ©2025 SLJ TRADING COMPANY LLC. All Rights Reserved.</span></p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="footer-built-by">
-        <p>Proudly Built by <strong>Douvo Edge</strong></p>
-      </div>
-</footer>
-<!-- footer end -->
-<!-- to top begin -->
-<a href="#" class="to-top uk-visible@m" data-uk-scroll style="background-color: #6C8E76; border: solid 1px white;">
-  Top<i class="fas fa-chevron-up" style="color: white"></i>
-</a>
-<!-- to top end -->
-<!-- javascript -->
-<script src="js/utilities.min.js"></script>
-<script src="js/config-theme.js"></script>
-
-<script src="script.js"></script>
+			hiddenElements.forEach((element) => {
+				serviceObserver.observe(element);
+			});
+		});
+	</script>
 </body>
 
 </html>
