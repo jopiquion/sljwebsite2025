@@ -11,10 +11,9 @@ export default defineStackbitConfig({
       rootPath: './content',
       contentDirs: ['pages', 'products', 'services', 'blog'],
       
-      // Models array for GitContentSource still requires 'name'
       models: [
         {
-          name: 'page', // KEEP name here
+          name: 'page', 
           type: 'page',
           urlPath: '/{slug}',
           filePath: 'content/pages/{slug}.md',
@@ -26,7 +25,7 @@ export default defineStackbitConfig({
           ]
         },
         {
-          name: 'product', // KEEP name here
+          name: 'product', 
           type: 'page',
           urlPath: '/products/{slug}',
           filePath: 'content/products/{slug}.md',
@@ -66,7 +65,7 @@ export default defineStackbitConfig({
           ]
         },
         {
-          name: 'service', // KEEP name here
+          name: 'service', 
           type: 'page',
           urlPath: '/services/{slug}',
           filePath: 'content/services/{slug}.md',
@@ -84,7 +83,7 @@ export default defineStackbitConfig({
           ]
         },
         {
-          name: 'post', // KEEP name here
+          name: 'post', 
           type: 'page',
           urlPath: '/blog/{slug}',
           filePath: 'content/blog/{slug}.md',
@@ -107,10 +106,8 @@ export default defineStackbitConfig({
     })
   ],
   
-  // The top-level models object: REMOVE 'name' property from these definitions.
   models: {
     page: {
-      // REMOVE: name: 'page',
       type: 'page',
       urlPath: '/{slug}',
       filePath: 'content/pages/{slug}.md',
@@ -123,7 +120,6 @@ export default defineStackbitConfig({
     },
     
     product: {
-      // REMOVE: name: 'product',
       type: 'page',
       urlPath: '/products/{slug}',
       filePath: 'content/products/{slug}.md',
@@ -164,7 +160,6 @@ export default defineStackbitConfig({
     },
     
     service: {
-      // REMOVE: name: 'service',
       type: 'page',
       urlPath: '/services/{slug}',
       filePath: 'content/services/{slug}.md',
@@ -183,7 +178,6 @@ export default defineStackbitConfig({
     },
     
     post: {
-      // REMOVE: name: 'post',
       type: 'page',
       urlPath: '/blog/{slug}',
       filePath: 'content/blog/{slug}.md',
@@ -206,16 +200,17 @@ export default defineStackbitConfig({
   
   devCommand: 'npm run dev',
   buildCommand: 'npm run build',
-  publishDir: './out',
+  publishDir: './out'
   
-  presets: [
-    {
-      name: 'default',
-      label: 'Default',
-      metadata: {
-        created_by: 'stackbit',
-        created_at: '2025-01-01T00:00:00.000Z'
-      }
-    }
-  ]
+  // REMOVED: presets section entirely
+  // presets: [
+  //   {
+  //     name: 'default',
+  //     label: 'Default',
+  //     metadata: {
+  //       created_by: 'stackbit',
+  //       created_at: '2025-01-01T00:00:00.000Z'
+  //     }
+  //   }
+  // ]
 });
