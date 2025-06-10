@@ -11,7 +11,6 @@ export default defineStackbitConfig({
     new GitContentSource({
       rootPath: './content',
       contentDirs: ['pages', 'products', 'services', 'blog'],
-      models: ['page', 'product', 'service', 'post'],
       assetsConfig: {
         referenceType: 'static',
         staticDir: 'public',
