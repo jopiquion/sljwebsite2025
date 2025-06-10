@@ -1,0 +1,22 @@
+[build]
+  # The directory to publish (where your built site files are)
+  publish = "."
+  
+  # If you have a build command, specify it here
+  # command = "npm run build"
+
+[dev]
+  # Local development settings
+  publish = "."
+  # If you have a local dev command, specify it here
+  # command = "npm run dev"
+
+# Visual Editor Plugin
+[[plugins]]
+  package = "@netlify/plugin-visual-editor"
+
+# Optional: Redirect rules (if needed)
+# [[redirects]]
+#   from = "/old-path"
+#   to = "/new-path"
+#   status = 301
