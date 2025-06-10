@@ -60,4 +60,5 @@ const ProductPage: React.FC<ProductPageProps> = ({ title, description, bodyHtml 
   );
 };
 
+
 export default ProductPage;

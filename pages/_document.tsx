@@ -16,4 +16,4 @@ class MyDocument extends Document {
   }
 }
 
-export default MyDocument;
+export default MyDocument; // <--- This is the line after the class definition
