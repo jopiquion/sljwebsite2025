@@ -1,0 +1,69 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: ""  # Not used, since you store media on BunnyCDN
+public_folder: "" # Same as above
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    folder: "content/pages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Page Title", name: "title", widget: "string" }
+      - { label: "Meta Description", name: "description", widget: "text" }
+      - { label: "Page Content", name: "body", widget: "markdown" }
+      - { label: "Hero Image URL", name: "image", widget: "string", required: false, hint: "Paste BunnyCDN image URL" }
+
+  - name: "products"
+    label: "Products"
+    folder: "content/products"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Product Name", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Product Image URL", name: "featured_image", widget: "string", required: false }
+      - { label: "Category", name: "category", widget: "select", options: [agro-commodities, metals, minerals, petroleum-products, sugar, rice, steel, emeralds] }
+      - { label: "Price Range", name: "price_range", widget: "string" }
+      - label: "Specifications"
+        name: "specifications"
+        widget: "list"
+        fields:
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "Value", name: "value", widget: "string" }
+      - { label: "Details", name: "body", widget: "markdown" }
+
+  - name: "services"
+    label: "Services"
+    folder: "content/services"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Service Name", name: "title", widget: "string" }
+      - { label: "Service Description", name: "description", widget: "text" }
+      - { label: "Service Icon URL", name: "icon", widget: "string", required: false }
+      - label: "Key Features"
+        name: "features"
+        widget: "list"
+        field: { label: "Feature", name: "feature", widget: "string" }
+      - { label: "Service Details", name: "body", widget: "markdown" }
+
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "content/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Post Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Post Excerpt", name: "excerpt", widget: "text" }
+      - { label: "Featured Image URL", name: "featured_image", widget: "string" }
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        field: { label: "Tag", name: "tag", widget: "string" }
+      - { label: "Post Content", name: "body", widget: "markdown" }
