@@ -1,0 +1,670 @@
+.didact-gothic-regular {
+  font-family: "Didact Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-color: white;
+  display: flex;
+  flex-direction: column; /* Arrange items vertically */
+  min-height: 100vh; /* Ensure the body is at least the height of the viewport */
+  margin: 0; /* Remove default margins */
+}
+
+.page-content {
+  flex: 1; /* Allow the main content to grow and fill space */
+  padding: 20px; /* Add spacing for content */
+}
+
+
+
+.hero-video-container {
+  max-width: 100%; /* Ensure the container does not exceed the page width */
+  overflow: hidden; /* Prevent the content from overflowing */
+  margin: 0 auto; /* Center the container */
+  padding: 0; /* Remove unnecessary padding */
+}
+
+.hero-video {
+  width: 100%; /* Scale video to fit the container width */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove inline spacing around the video */
+}
+
+.contact-form {
+  width: 50%; /* Define the width of the div */
+  margin: 0 auto; /* Center horizontally */
+}
+
+/* General container styles */
+.iframe-container {
+  padding-top: 100px; /* Adjust padding for space above */
+  text-align: center; /* Center the text and iframe */
+}
+
+/* Wrapper for maintaining aspect ratio */
+.iframe-wrapper {
+  position: relative;
+  width: 90%; /* Default width as 90% of the screen */
+  max-width: 900px; /* Maximum width to match original size */
+  margin: 0 auto; /* Center the iframe */
+  aspect-ratio: 16 / 9; /* Maintain 16:9 aspect ratio */
+}
+
+.iframe-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width of the parent container */
+  height: 100%; /* Full height of the parent container */
+  border: none; /* Remove iframe border */
+}
+
+/* Smaller screens */
+@media (max-width: 768px) {
+  .iframe-wrapper {
+    width: 100%; /* Full width on smaller screens */
+  }
+
+  .iframe-container {
+    padding-top: 50px; /* Reduce padding for smaller screens */
+  }
+}
+
+/* General Section Styling */
+.president-message {
+  
+  font-family: 'Arial', sans-serif;
+  color: black;
+  line-height: 1.6;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center; /* Center content */
+}
+
+/* Section Title */
+.section-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: zzzzzzz;
+  border-bottom: 2px solid #006400;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Letter Content */
+.letter {
+  font-size: 16px;
+  text-align: justify; 
+}
+
+/* President Image */
+.president-image {
+  margin-bottom: 20px;
+}
+
+.president-image img {
+  display: block;
+  margin: 0 auto;
+  max-width: 200px; /* Adjust size of the image */
+  border: 5px solid #006400; /* Add dark green border */
+  box-shadow: 0 4px 10px rgba(0, 100, 0, 0.5); /* Dark green shadow */
+}
+
+/* Signature Styling */
+.signature {
+  font-family: 'Snell Roundhand', cursive; /* Cursive handwritten font */
+  font-size: 20px;
+  margin-top: -10px; /* Slight adjustment to align with "With appreciation" */
+  color: black;
+}
+
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .president-image img {
+    max-width: 150px; /* Reduce image size on mobile */
+    margin: 0 auto; /* Center the image horizontally */
+    display: block; /* Ensure it's treated as a block element */
+  }
+}
+
+
+
+
+
+
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .carousel-container {
+    flex-direction: column; /* Stack cards on small screens */
+    align-items: center;
+  }
+  .product-card {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+
+
+
+
+section {
+
+padding: 5%;
+
+}
+
+/* General Section */
+.products-list {
+  display: flex;
+  flex-wrap: wrap; /* Allow the cards to wrap */
+  justify-content: center; /* Center the cards horizontally */
+  gap: 30px; /* Space between the cards */
+  padding: 20px;
+}
+
+/* Individual Product Card */
+.product-card {
+  position: relative;
+  width: 300px;
+  height: 400px; /* Adjusted height to fit content */
+  perspective: 1000px; /* Add perspective for 3D flip effect */
+  cursor: pointer; /* Indicate that the card is clickable */
+  background-color: white; /* Dark green background for the card */
+  color: black; /* Dark green text */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* Hide content when flipped */
+}
+
+.product-card-front,
+.product-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hide back when flipped */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 8px;
+  transition: transform 0.6s; /* Smooth flip transition */
+}
+
+.product-card-front {
+  background-color: #f4f4f4; /* Light background for the front */
+}
+
+.product-card-back {
+  background-color: white; /* Dark green background for the back */
+  color: white;
+  transform: rotateY(180deg); /* Flip the back side */
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 10px; /* Space at the bottom */
+}
+
+/* Flip on click */
+.product-card.flipped .product-card-front {
+  transform: rotateY(180deg); /* Flip the front */
+}
+
+.product-card.flipped .product-card-back {
+  transform: rotateY(0deg); /* Show the back */
+}
+
+/* Product Image */
+.product-card img {
+  width: 100%;
+  height: 80%; /* Image takes 80% of the card height */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px; /* Space between image and description */
+}
+
+/* Product Title */
+.header-font {
+  font-size: 1.2rem;
+  color: #006400;
+  margin: 10px 0;
+}
+
+/* Product Description */
+.product-description {
+  font-size: 1rem;
+  color: black;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  text-align: center; /* Center text in description */
+}
+
+/* Contact Us Button */
+/* Button Styling */
+.button {
+  background-color: #006400; /* Dark green background */
+  color: white; /* White text for the button */
+  font-family: "Didact Gothic", sans-serif; /* Same font as website */
+  font-weight: normal; /* No bold text */
+  padding: 8px 15px; /* Adjust padding for a smaller button size */
+  border: none;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Button shadow to show it's clickable */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  text-align: center; /* Center the text */
+  display: inline-block;
+  width: auto; /* Let the button width adjust based on content */
+  max-width: 200px; /* Limit the max width of the button */
+  margin: 10px auto; /* Center the button horizontally */
+}
+
+/* Button Hover Effect */
+.button:hover {
+  background-color: forestgreen; /* Slightly lighter green on hover */
+  transform: scale(1.05); /* Slight scaling effect */
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .button {
+    width: 80%; /* Make the button wider on small screens */
+    max-width: none; /* Remove the max width limit */
+    font-size: 0.9rem; /* Smaller font size for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .button {
+    width: 90%; /* Adjust button size for very small screens */
+    font-size: 0.8rem; /* Smaller font size for very small screens */
+  }
+
+  
+}
+
+.button:hover {
+  background-color: #006400; /* Light green background on hover */
+  transform: scale(1.05); /* Slight scaling effect */
+}
+
+.contact-us {
+  margin-top: 10px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .product-card {
+    width: 250px; /* Adjust width for mobile screens */
+    height: 350px; /* Adjust height for mobile screens */
+  }
+}
+
+
+/* Contact Us Button */
+
+.button:hover {
+  background-color: #006400; /* Light green background on hover */
+  transform: scale(1.05); /* Slight scaling effect */
+}
+
+.contact-us {
+  margin-top: 10px;
+}
+
+/* Arrows */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.arrow.left {
+  left: 0;
+}
+
+.arrow.right {
+  right: 0;
+}
+
+.arrow:hover {
+  background-color: forestgreen;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .carousel-container {
+    flex-direction: column; /* Stack the cards on mobile */
+  }
+
+  .product-card {
+    width: 250px; /* Adjust width for mobile screens */
+    height: 350px; /* Adjust height for mobile screens */
+  }
+}
+
+
+
+
+
+.header-font {
+
+  color: #006400;
+  font-size: 1.5rem;
+
+}
+
+.card {
+  background-color: olive;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-right: 10px; /* Add space to the right of each button */
+}
+
+.card-font {
+
+  color: white;
+}
+
+.card-header {
+
+  color: white;
+  font-size: 1.5rem;
+
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+  gap: 20px; /* Space between cards */
+  max-width: 800px; /* Limit overall grid width */
+  margin: 0 auto; /* Center the grid */
+}
+
+.testimonial-card {
+  background-color: white; /* Card background */
+  border: 2px solid #006400; /* Dark green border */
+  color: black; /* Dark green text color */
+  padding: 20px; /* Padding inside the card */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 100, 0, 0.5); /* Dark green shadow */
+}
+
+.testimonial {
+  text-align: left; /* Align text to the left */
+}
+
+.testimonial-text {
+  font-size: 16px; /* Adjust font size for readability */
+  line-height: 1.5; /* Better line spacing */
+}
+
+
+p {
+  margin: 0 0 10px; /* Space between paragraphs */
+}
+
+hr {
+  border: none; /* Remove default border style */
+  border-top: 1px solid white; /* White horizontal line */
+  margin: 20px 0; /* Spacing around the line */
+}
+
+
+
+
+
+
+.button:last-child {
+  margin-right: 0; /* Remove the right margin from the last button */
+}
+
+.button:hover {
+  background-color: forestgreen;
+  transform: scale(1.05);
+}
+
+.button-text {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+
+/* General Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Space between logo and menu/hamburger */
+  align-items: center;
+  padding: 10px 20px; /* Add padding to keep content within the page */
+  background-color: white; /* White navbar background */
+  color: #006400; /* Navbar text color */
+  position: fixed; /* Fix navbar to the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it's above other elements */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for navbar */
+  max-width: 100%; /* Prevent overflow */
+  box-sizing: border-box; /* Include padding in width calculations */
+}
+
+.logo img {
+  max-width: 120px; /* Reasonable logo size */
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px; /* Space between links */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #006400; /* Dark green text color */
+  font-size: 16px;
+  padding: 5px 10px; /* Add padding for hover and active effects */
+  border-radius: 4px; /* Rounded corners for hover effect */
+  transition: all 0.3s ease; /* Smooth hover and active transitions */
+}
+
+.nav-links a:hover {
+  background-color: #006400; /* Light green background on hover */
+  color: black; /* Black text on hover */
+}
+
+.nav-links a.active {
+  background-color: #006400; /* Dark green background for active state */
+  color: white; /* White text for active state */
+}
+
+.hamburger {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: #006400; /* Default hamburger color */
+  transition: all 0.3s ease; /* Smooth transition for open/close animation */
+}
+
+.hamburger.open .line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open .line:nth-child(2) {
+  opacity: 0; /* Hide middle line */
+}
+
+.hamburger.open .line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide menu by default */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: white; /* Default menu background color */
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for dropdown */
+    z-index: 1000; /* Ensure menu is above the video */
+  }
+
+  .nav-links.active {
+    display: flex; /* Show menu when active */
+  }
+
+  .nav-links a.active {
+    background-color: white; /* Dark green background for active links */
+    color: white; /* White text for active links */
+  }
+
+  .hamburger {
+    display: flex; /* Show hamburger icon */
+  }
+}
+
+
+
+/* General footer styles */
+/* General footer styling */
+.footer {
+  background-color: #006400; /* Dark green background */
+  color: white; /* White text */
+  padding: 20px; /* Space around content */
+  font-size: 14px; /* Text size */
+  width: 100%; /* Ensure full width within the page */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.footer-content {
+  display: flex; /* Flex layout */
+  justify-content: space-between; /* Space between left and right sections */
+  align-items: center; /* Align content vertically */
+  max-width: 1200px; /* Set max width for content */
+  margin: 0 auto; /* Center within the page */
+  padding-bottom: 10px; /* Spacing below content */
+}
+
+.left-content {
+  text-align: left;
+}
+
+.right-content {
+  display: flex; /* Flexbox for layout */
+  gap: 20px; /* Space between links */
+}
+
+.footer-link {
+  color: white; /* White links */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s; /* Smooth color change */
+}
+
+.footer-link:hover {
+  color: #66ff66; /* Light green hover */
+}
+
+.footer-bottom {
+  display: flex; /* Flex layout for contact info */
+  justify-content: space-between; /* Space between items */
+  max-width: 1200px; /* Align bottom section to content width */
+  margin: 10px auto 0; /* Center and add space above */
+  padding: 0 20px; /* Padding to align with the rest of the content */
+}
+
+.contact-item {
+  flex: 1; /* Equal spacing for each item */
+  text-align: center; /* Center text */
+}
+
+
+/* Services Grid Layout */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 100px; /* Space between grid items */
+  justify-items: stretch; /* Stretch grid items to equal width */
+}
+
+/* Service Card Styling */
+.service-card {
+  display: flex; /* Flexbox for layout */
+  flex-direction: column; /* Align content vertically */
+  align-items: center; /* Center content horizontally */
+  justify-content: space-between; /* Space between content items */
+  text-align: center; /* Center align text */
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  border-radius: 8px;
+  background-color: white; /* Card background color */
+  color: white;
+  height: 100%; /* Ensures consistent height */
+}
+
+/* Service Image Styling */
+.service-image {
+  width: 100%; /* Responsive width */
+  max-width: 300px; /* Limit image size */
+  height: 300px; /* Fixed height */
+  object-fit: cover; /* Prevent distortion */
+  display: block; /* Remove inline spacing */
+  margin: 0 auto; /* Center horizontally */
+  border-radius: 8px; /* Optional rounded corners */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr; /* 1 card per row on smaller screens */
+  }
+
+  .service-image {
+    height: 200px; /* Smaller height for small screens */
+  }
+}
+

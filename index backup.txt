@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SLJ TRADING COMPANY</title>
+    <meta property="og:title" content="SLJ TRADING COMPANY" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    
+    
+
+<link rel="stylesheet" href="./style.css" />
+
+<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/6281e8acba04781c4569d4571/3a8c66a799007d3a76fc00b9a.js");</script>
+  </head>
+
+
+
+
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html"><img src="https://sljtradingcompany.b-cdn.net/SLJ-logo.png" alt="Logo"></a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+<!--
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background-image: url(./hero-ship.mp4); /* Replace with your image URL */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .hero-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+      white-space: nowrap; /* Ensures text stays on one line */
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .hero-content p {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero-content .button-container {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: nowrap; /* Prevents buttons from wrapping */
+    }
+
+    .button-container .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      color: white;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    
+
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+
+      .button-container .button {
+        font-size: 0.875rem;
+        padding: 0.5rem;
+      }
+    }
+  </style>
+
+<div class="hero">
+  <div class="hero-content">
+    <h1 style="font-family: Montserrat, serif; color: #6C8E76">Welcome to SLJ TRADING COMPANY</h1>
+    <div class="button-container">
+      <a href="products.html" class="button">Learn More</a> 
+      <a href="contact.html" class="button">Contact Us</a>
+    </div>
+  </div>
+</div>
+
+-->
+
+
+
+
+<!--
+          
+<div>
+
+<div class="hero-video-container mobile-version">
+  <video class="hero-video" autoplay muted loop controls>
+    <source src="./SLJ-small-3.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+
+<div class="hero-video-container desktop-version">
+  <video class="hero-video" autoplay muted loop controls>
+    <source src="./SLJ-large-3.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+</div>
+
+-->
+
+
+
+<div class="hero">
+  <video id="hero-video" autoplay loop muted playsinline poster="fallback-image.jpg">
+    <source src="https://sljtradingcompany.b-cdn.net/pics/SLJ New Hero Video 7.mp4" type="video/mp4">
+    <source src="https://sljtradingcompany.b-cdn.net/pics/SLJ New Hero Video 7.webm" type="video/webm">
+    <img src="https://sljtradingcompany.b-cdn.net/pics/Ship-Hero-2-pic.png" alt="Cargo Ship Sailing">
+  </video>
+  <div class="video-controls">
+    <button id="mute-btn">Mute</button>
+    <input id="volume-slider" type="range" min="0" max="1" step="0.1" value="1">
+  </div>
+</div>
+
+
+<script>
+  // Get references to elements
+const video = document.getElementById("hero-video");
+const muteBtn = document.getElementById("mute-btn");
+const volumeSlider = document.getElementById("volume-slider");
+
+// Ensure the video starts muted
+video.muted = true;
+
+// Update button text based on mute state
+const updateMuteButton = () => {
+  muteBtn.textContent = video.muted ? "Unmute" : "Mute";
+};
+
+// Toggle mute functionality
+muteBtn.addEventListener("click", () => {
+  video.muted = !video.muted;
+  updateMuteButton();
+});
+
+// Adjust video volume
+volumeSlider.addEventListener("input", (e) => {
+  video.volume = e.target.value;
+  if (video.volume > 0) {
+    video.muted = false; // Automatically unmute if volume is increased
+    updateMuteButton();
+  }
+});
+
+// Sync slider with video volume on load
+document.addEventListener("DOMContentLoaded", () => {
+  volumeSlider.value = video.volume;
+  updateMuteButton();
+});
+
+</script>
+
+
+
+<section>
+
+  <style>
+
+    /* Container Styling */
+.welcome-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Left Column Styling */
+.left-column {
+  flex: 1;
+  padding: 20px;
+  min-width: 300px;
+}
+
+.left-column h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #6C8E76;
+}
+
+.left-column h2 {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.left-column p {
+  font-size: 16px;
+  color: #444;
+}
+
+/* Right Column Styling */
+.right-column {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+  min-width: 300px;
+}
+
+.right-column img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .welcome-container {
+    flex-direction: column;
+  }
+
+  .left-column h1 {
+    font-size: 32px;
+  }
+
+  .left-column h2 {
+    font-size: 16px;
+  }
+
+  .left-column p {
+    font-size: 14px;
+  }
+}
+
+  </style>
+
+  <div class="welcome-container">
+    <div class="left-column">
+      <h1 style="font-family: Montserrat, serif; color: #6C8E76">Welcome to SLJ Trading Company LLC</h1>
+      <h2 style="font-family: Montserrat, serif; color: #6C8E76">Connecting Global Buyers and Suppliers in Agriculture, Energy, and Minerals.</h2>
+      <p>
+        With over 30 years of expertise in commodities and international trade, SLJ Trading Company LLC bridges the gap 
+        between global suppliers and buyers. Our commitment to quality, reliability, and tailored solutions ensures 
+        success in every transaction. Let’s build partnerships that thrive.
+      </p>
+
+      <div>
+                 
+         
+         <p>
+           Explore our wide range of international trade services and products. We are dedicated to facilitating global trade with excellence.
+         </p>
+         <p>
+
+           We specialize in connecting global buyers and suppliers in agriculture, energy, and minerals. Our mission is to drive excellence in international trade.
+         </p>
+     </div>
+     
+    </div>
+    <div class="right-column">
+      <img src="global.png" alt="Plane and globe">
+    </div>
+  </div>
+
+  <div class="cta-buttons">
+    <a href="products.html"><span class="button cta-buttons-shake">Our Products</span></a>
+    <a href="services.html"><span class="button cta-buttons-shake">Our Services</span></a>
+    <a href="contact.html"><span class="button cta-buttons-shake">Contact Us</span></a>
+</div>
+</section>
+          
+
+
+<section style="text-align: center;">
+            
+          
+          <style>
+              /* General Button Styles */
+              .cta-buttons {
+                  display: flex;
+                  justify-content: center; /* Centers horizontally */
+                  gap: 20px; /* Adds spacing between buttons */
+                  margin: 20px 0; /* Adds spacing above and below the button group */
+              }
+          
+              .cta-buttons-shake {
+                  display: inline-block;
+                  padding: 10px 20px;
+                  font-weight: bold;
+                  color: #fff;
+                  border-radius: 5px;
+                  text-decoration: none;
+                  text-align: center;
+                  transition: all 0.3s ease;
+                  animation: shake 5s infinite ease-in-out;
+              }
+          
+              /* Add unique delays to each button for staggered animations */
+              .cta-buttons-shake a:nth-child(1) .button {
+                  animation-delay: 0s;
+              }
+          
+              .cta-buttons-shake a:nth-child(2) .button {
+                  animation-delay: 1s;
+              }
+          
+              .cta-buttons-shake a:nth-child(3) .button {
+                  animation-delay: 2s;
+              }
+          
+              /* Hover Effect */
+              
+          
+              /* Keyframes for Shake Animation */
+              @keyframes shake {
+                  0%, 100% {
+                      transform: translateX(0);
+                  }
+                  25% {
+                      transform: translateX(-5px);
+                  }
+                  50% {
+                      transform: translateX(5px);
+                  }
+                  75% {
+                      transform: translateX(-5px);
+                  }
+              }
+          
+              /* Responsive Design for Mobile (Align Vertically) */
+              @media (max-width: 768px) {
+                  .cta-buttons-shake {
+                      flex-direction: column; /* Align buttons vertically */
+                      align-items: center; /* Center buttons horizontally */
+                      gap: 15px; /* Adjust vertical spacing */
+                      font-size: Medium;
+                  }
+          
+                  
+              }
+          </style>
+          
+          
+            </section>
+
+            
+            <section id="featured-products" class="featured-products">
+                            <div class="container">
+
+                <h1 style="font-family: Montserrat, serif; color: #6C8E76" style="color:#6C8E76">Highlighted Products</h1>
+
+                <br>
+            
+                <!-- Product 1: Refined Sugar (ICUMSA 45, 100) -->
+                <div class="product-highlight">
+                  <img src="https://sljtradingcompany.b-cdn.net/pics/more-kids-eating-ice-cream-in-the-summer-2023-11-27-05-14-43-utc.jpg" alt="Refined Sugar (ICUMSA 45, 100)" class="service-image-2 fade-in-right" />
+                  <div class="product-content">
+                    <h3 style="font-family: Montserrat, serif; color: #6C8E76" class="fade-in-right">Refined Sugar (ICUMSA 45, 100)</h3>
+                    <p class="fade-in-right" style="color: black;">
+                      Refined sugar with uncompromising quality, tailored for medium- to high-volume buyers. Brilliant white, uniform granules for perfection.
+                    </p>
+                    <a href="sugar.html"><span class="button learn-more fade-in-right">Learn More</span></a>
+
+                  </div>
+                </div>
+
+                <!-- Product 2: Raw Sugar (VHP) -->
+                <div class="product-highlight reverse">
+                  <img src="https://sljtradingcompany.b-cdn.net/pics/sugarcane-field-with-plants-growing-2024-12-06-21-55-55-utc.jpg" alt="Raw Sugar (VHP)" class="service-image-2 fade-in-left" />
+                  <div class="product-content">
+                    <h3 style="font-family: Montserrat, serif; color: #6C8E76" class="fade-in-right">Raw Sugar (VHP)</h3>
+                    <p class="fade-in-right" style="color: black;">
+                      Carefully sourced and inspected for global quality standards.                    
+                    </p>
+                    <a href="sugar.html"><span class="button learn-more fade-in-right">Learn More</span></a>
+
+                  </div>
+                </div>
+            
+                <!-- Product 3: Chicken Paws -->
+                <div class="product-highlight">
+                  <img src="https://sljtradingcompany.b-cdn.net/pics/raw-fresh-chicken-feets-in-wooden-plate-wooden-ba-2024-12-10-00-34-41-utc.jpg" alt="Chicken Paws" class="service-image-2 fade-in-right" />
+                  <div class="product-content">
+                    <h3 style="font-family: Montserrat, serif; color: #6C8E76" class="fade-in-left">Chicken Paws</h3>
+                    <p class="fade-in-left" style="color: black;">
+                      Premium-grade chicken paws processed to international standards, meeting the needs of importers and food manufacturers.
+                    </p>
+                    <a href="chicken-paws.html"><span class="button learn-more fade-in-right">Learn More</span></a>
+
+                  </div>
+                </div>
+            
+                <!-- Product 4: Iron Ore -->
+                <div class="product-highlight reverse">
+                  <img src="iron-ore.jpg" alt="Iron Ore" class="service-image-2 fade-in-left" />
+                  <div class="product-content">
+                    <h3 style="font-family: Montserrat, serif; color: #6C8E76" class="fade-in-right">Iron Ore</h3>
+                    <p class="fade-in-right" style="color: black;">
+                      Premium-grade minerals that drive industrial excellence.
+                    </p>
+                    <a href="iron-ore.html"><span class="button learn-more fade-in-right">Learn More</span></a>
+
+                  </div>
+                </div>
+            
+                <!-- Product 4: Steel Products 
+                <div class="product-highlight reverse">
+                  <img src="steel.jpg" alt="Steel Products" class="product-image fade-in-left" />
+                  <div class="product-content">
+                    <h3 style="font-family: Montserrat, serif; color: #6C8E76" class="fade-in-left">Steel Products</h3>
+                    <p class="fade-in-left" style="color: black;">
+                      Wide range of steel products designed for construction, manufacturing, and heavy industry.
+                    </p>
+                    <a href="steel.html"><span class="button learn-more fade-in-right">Learn More</span></a>
+
+                  </div>
+                </div>
+            
+                 Product 5: Rice 
+                <div class="product-highlight">
+                  <img src="rice.jpg" alt="Rice" class="product-image fade-in-right" />
+                  <div class="product-content">
+                    <h3 style="font-family: Montserrat, serif; color: #6C8E76" class="fade-in-right">Rice</h3>
+                    <p class="fade-in-right" style="color: black;">
+                      Premium-quality rice varieties sourced globally for wholesalers and retailers.
+                    </p>
+                    <a href="rice.html"><span class="button learn-more fade-in-right">Learn More</span></a>
+
+                  </div>
+                </div>
+              </div> -->
+            </section>
+
+            
+            <script>
+              document.addEventListener("DOMContentLoaded", () => {
+                const observerOptions = {
+                  root: null, // viewport
+                  rootMargin: "0px",
+                  threshold: 0.2, // Trigger when 50% of the element is visible
+                };
+            
+                const observer = new IntersectionObserver((entries, observer) => {
+                  entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                      const elements = entry.target.querySelectorAll(".fade-in-right, .fade-in-left");
+            
+                      elements.forEach((el, index) => {
+                        setTimeout(() => {
+                          el.classList.add("visible");
+                        }, index * 500); // Stagger animations
+                      });
+             
+                      // Once animation is triggered, unobserve the element
+                      observer.unobserve(entry.target);
+                    }
+                  });
+                }, observerOptions);
+            
+                // Observe each product-highlight section
+                const highlights = document.querySelectorAll(".product-highlight");
+                highlights.forEach((highlight) => observer.observe(highlight));
+              });
+            </script>
+            
+            
+            <p style="text-align: center;">
+              <a href="contact.html"><span class="button">Start Your Global Trade Partnership Today</span></a>
+            </p>
+            
+
+            <section class="services-section">
+              <div class="services-grid">
+                <!-- Service Card 1 -->
+                <div class="service-card">
+                  <img src="https://sljtradingcompany.b-cdn.net/pics/rice-noodle-and-chicken-feet-liquid-2023-11-27-05-17-18-utc.jpg" alt="Wide Range of Products" class="service-image-2" />
+                  <p class="header-font">Wide Range of Products</p>
+                  <p>Explore our diverse product catalog sourced globally.</p>
+                </div>
+                <!-- Service Card 2 -->
+                <div class="service-card">
+                  <img src="https://sljtradingcompany.b-cdn.net/pics/mature-businessman-talking-on-mobile-phone-and-wor-2024-11-27-15-10-47-utc.JPG" alt="Market Analysis" class="service-image-2" />
+                  <p class="header-font">Market Analysis</p>
+                  <p>Global market research and analysis.</p>
+                </div>
+                <!-- Service Card 3 -->
+                <div class="service-card">
+                  <img src="https://sljtradingcompany.b-cdn.net/pics/arial-view-by-drone-camera-transportation-logistic-2023-11-27-05-06-37-utc.jpg" alt="Logistics Expertise" class="service-image-2" />
+                  <p class="header-font">Logistics Expertise</p>
+                  <p>Efficient logistics and supply chain management.</p>
+                </div>
+                <!-- Service Card 4 -->
+                <div class="service-card">
+                  <img src="https://sljtradingcompany.b-cdn.net/pics/rope-on-the-old-map-2023-11-27-05-28-15-utc.jpg" alt="Global Reach" class="service-image-2" />
+                  <p class="header-font">Global Reach</p>
+                  <p>We have a vast network of partners and clients worldwide.</p>
+                </div>
+                <!-- Service Card 5 -->
+                <div class="service-card">
+                  <img src="https://sljtradingcompany.b-cdn.net/pexels-mikhail-nilov-7681298.jpg" alt="Customer Satisfaction" class="service-image-2" />
+                  <p class="header-font">Customer Satisfaction</p>
+                  <p>We prioritize customer needs and satisfaction above all else.</p>
+                </div>
+                <!-- Service Card 6 -->
+                <div class="service-card">
+                  <img src="https://sljtradingcompany.b-cdn.net/pics/italy-business-people-having-meeting-in-creative-2024-07-05-16-44-10-utc.jpg" alt="Quality Assurance" class="service-image-2" />
+                  <p class="header-font">Quality Assurance</p>
+                  <p>Our products undergo rigorous quality checks to ensure top-notch standards.</p>
+                </div>
+              </div>
+
+              
+            </section>
+
+            <p style="text-align: center;">
+              <a href="contact.html"><span class="button">Connect With Us For Your Global Trade Needs</span></a>
+            </p>
+
+            
+                 
+
+            <!-- Testimonials Component 
+            
+                <div class="card" style="margin: 10%; text-align: center;">
+                  <p class="card-header">Our Products</p>
+                  <p class="card-font">
+                    Browse through our wide range of high-quality products from various industries.
+                  </p>
+                </div>
+
+                <div class="card" style="margin: 10%; text-align: center;">
+                  <p class="card-header">Learn About Our Services</p>
+                  <p class="card-font">
+                    Discover the comprehensive services we offer to facilitate international trade for our clients.                  </p>
+                </div>
+
+                <div class="card" style="margin: 10%; text-align: center;">
+                  <p class="card-header">Contact Us for Inquiries</p>
+                  <p class="card-font">
+                    Reach out to our team for any questions or inquiries you may have about our company or offerings.
+                </div>
+
+                -->
+  
+          
+         
+          
+            
+          
+            <br>
+
+            <div>
+              <p class="header-font" style="text-align: center;">
+                What Our Clients Say
+              </p>
+            </div>
+            
+            <div class="testimonial-grid">
+              <div class="testimonial-card">
+                <div class="testimonial">
+                  <div class="testimonial-text">
+                    <p>I highly recommend their services to anyone looking to expand their global reach.</p><br>
+                    John Doe<br>
+                    CEO, Company ABC<br>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="testimonial-card">
+                <div class="testimonial">
+                  <div class="testimonial-text">
+                    <p>The team was incredibly professional and delivered results beyond expectations.</p><br>
+                    <p>Jane Smith<br>
+                    Marketing Director, Company XYZ</p>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="testimonial-card">
+                <div class="testimonial">
+                  <div class="testimonial-text">
+                    <p>Their knowledge of international trade regulations and market trends is truly impressive.</p><br>
+                    <p>Michael Johnson<br>
+                    Supply Chain Manager, Company 123</p>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="testimonial-card">
+                <div class="testimonial">
+                  <div class="testimonial-text">
+                    <p>Partnering with this company has been a strategic decision for our business.</p><br>
+                    <p>Sarah Lee<br>
+                    Finance Manager, Company ABCD</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+
+            
+
+
+            
+              <hr style="border: solid 1px black;">
+
+              <section>
+
+                <p class="header-font" style="text-align: center;">Join our community for updates on global trade opportunities.</p>
+
+                <div id="mc_embed_shell">
+                  <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+                  <style type="text/css">
+                    /* General Form Styling */
+                    #mc_embed_signup {
+                        background: #f9f9f9;
+                        font-family: "Montserrat", sans-serif;
+                        color: #333;
+                        border-radius: 8px;
+                        padding: 20px;
+                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                        max-width: 600px;
+                        margin: 20px auto;
+                    }
+                
+                    #mc_embed_signup h2 {
+                        font-size: 24px;
+                        color: #6C8E76;
+                        margin-bottom: 15px;
+                        text-align: center;
+                    }
+                
+                    #mc_embed_signup div.mc-field-group label {
+                        font-size: 14px;
+                        font-weight: 600;
+                        margin-bottom: 5px;
+                        display: block;
+                    }
+                
+                    #mc_embed_signup div.mc-field-group input[type="text"],
+                    #mc_embed_signup div.mc-field-group input[type="email"] {
+                        width: 100%;
+                        padding: 10px;
+                        margin-bottom: 15px;
+                        border: 1px solid #ddd;
+                        border-radius: 5px;
+                        font-size: 14px;
+                        font-family: "Montserrat", sans-serif;
+                        box-sizing: border-box;
+                    }
+                
+                    /* Align Email and Checkbox */
+                    .checkbox-row {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between; /* Push Email left and checkbox right */
+                        padding: 10px 0; /* Add spacing around the row */
+                    }
+                
+                    .checkbox-row label {
+                        margin: 0;
+                        font-size: 14px;
+                        font-weight: 600;
+                        color: #333;
+                    }
+                
+                    .checkbox-row input[type="checkbox"] {
+                        width: auto;
+                        margin-left: auto; /* Push checkbox to the right */
+                    }
+                
+                    #mc_embed_signup input.button {
+                        background-color: #5C7D66;
+                        color: white;
+                        font-family: "Montserrat", sans-serif;
+                        font-size: 16px;
+                        font-weight: 600;
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        transition: background-color 0.3s ease, transform 0.2s ease;
+                        display: block;
+                        width: 100%;
+                        text-align: center;
+                    }
+                
+                    #mc_embed_signup input.button:hover {
+                        background-color: 4B6B57;
+                        transform: scale(1.05);
+                    }
+                  </style>
+                
+                  <div id="mc_embed_signup">
+                    <form action="https://sljtradingcompany.us10.list-manage.com/subscribe/post?u=6281e8acba04781c4569d4571&amp;id=b5eef182c4&amp;v_id=38&amp;f_id=00f6bee5f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                      <div id="mc_embed_signup_scroll">
+                        <h2 style="font-family: Montserrat, serif; color: #6C8E76">Subscribe</h2>
+                        <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+                        <div class="mc-field-group">
+                          <label for="mce-FNAME">First Name <span class="asterisk">*</span></label>
+                          <input type="text" name="FNAME" class="required text" id="mce-FNAME" required="">
+                        </div>
+                        <div class="mc-field-group">
+                          <label for="mce-LNAME">Last Name <span class="asterisk">*</span></label>
+                          <input type="text" name="LNAME" class="required text" id="mce-LNAME" required="">
+                        </div>
+                        <div class="mc-field-group">
+                          <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
+                          <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="">
+                        </div>
+                        <div id="mergeRow-gdpr" class="mergeRow gdpr-mergeRow content__gdprBlock mc-field-group">
+                          <div class="content__gdpr">
+                            <label>Marketing Permissions</label>
+                            <p>By submitting this form, you agree to be contacted by SLJ TRADING COMPANY LLC via email.</p>
+                            <br>
+                            <p>You can unsubscribe at any time by clicking the link in the footer of our emails. For information about our privacy practices, please visit our website.</p>
+                          </div>
+                          <div class="content__gdprLegal">
+                            <p>We use Mailchimp as our marketing platform. By clicking below to subscribe, you acknowledge that your information will be transferred to Mailchimp for processing. <a href="https://mailchimp.com/legal/terms">Learn more</a> about Mailchimp's privacy practices.</p>
+                          </div>
+                        </div>
+                        <div hidden="">
+                          <input type="hidden" name="tags" value="14270583">
+                        </div>
+                        <div id="mce-responses" class="clear">
+                          <div class="response" id="mce-error-response" style="display: none;"></div>
+                          <div class="response" id="mce-success-response" style="display: none;"></div>
+                        </div>
+                        <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                          <input type="text" name="b_6281e8acba04781c4569d4571_b5eef182c4" tabindex="-1" value="">
+                        </div>
+                        <div class="clear">
+                          <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                
+                
+                
+
+            
+        </section>
+        
+              
+                
+
+        <footer class="footer">
+          <div class="footer-content">
+            <div class="footer-section left-content">
+              <p>© 2024 SLJ Trading Company</p>
+            </div>
+            <div class="footer-section right-content">
+              <a href="privacy.html" class="footer-link">Privacy Policy</a>
+              <a href="cookies.html" class="footer-link">Cookies Policy</a>
+            </div>
+          </div>
+        
+          <div class="footer-bottom">
+            <div class="contact-item">
+              <p><strong>Find us:</strong><br>848 Brickell Ave.<br>Penthouse 5<br>Miami, FL 33131</p>
+            </div>
+            <div class="contact-item">
+              <p><strong>Call us:</strong><br><a href="tel:+13059395154" class="footer-link">+1 305 939 5154</a></p>
+            </div>
+            <div class="contact-item">
+              <p><strong>Mail us:</strong><br><a href="mailto:info@sljtradingcompany.com" class="footer-link">info@sljtradingcompany.com</a></p>
+            </div>
+          </div>
+        
+          <div class="footer-built-by">
+            <p>Proudly Built by <strong>Douvo Edge</strong></p>
+          </div>
+        </footer>
+        
+            
+            
+                 
+          
+
+<script src="script.js"></script>
+
+             
+  </body>
+</html>
