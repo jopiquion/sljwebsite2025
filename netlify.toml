@@ -1,22 +1,21 @@
 [build]
-  # The directory to publish (where your built site files are)
-  publish = "."
-  
-  # If you have a build command, specify it here
-  # command = "npm run build"
+  command = "npm run build" # Or 'yarn build', if you use Yarn
+  publish = "YOUR_PUBLISH_DIRECTORY"
 
-[dev]
-  # Local development settings
-  publish = "."
-  # If you have a local dev command, specify it here
-  # command = "npm run dev"
+[build.environment]
+  # Specify Node.js version to match your stackbit.config.ts and local environment
+  # This helps prevent discrepancies between your local machine and Netlify's build
+  NODE_VERSION = "18"
 
-# Visual Editor Plugin
+# Configuration for the Netlify Visual Editor plugin
 [[plugins]]
   package = "@netlify/plugin-visual-editor"
 
-# Optional: Redirect rules (if needed)
-# [[redirects]]
-#   from = "/old-path"
-#   to = "/new-path"
-#   status = 301
+# Required for the visual editor to proxy requests correctly during local development
+# This is typically added automatically or provided in examples.
+# The `to` port (8288) must match what the visual editor plugin expects for its internal server.
+[[redirects]]
+  from = "/.ntlfy-dev/*"
+  to = "http://localhost:8288/:splat"
+  status = 200
+  headers = {X-NF-Hidden-Proxy = "true"}
