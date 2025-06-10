@@ -18,10 +18,18 @@ const PAGES_CONTENT_DIR = path.join(process.cwd(), 'content', 'pages');
 export const getStaticPaths: GetStaticPaths = async () => {
   // Read all filenames from the content/pages directory
   const filenames = fs.readdirSync(PAGES_CONTENT_DIR);
-  // Map filenames to slugs for dynamic paths
-  const paths = filenames.map((filename) => ({
-    params: { slug: filename.replace(/\.md$/, '') },
-  }));
+
+  // Define the slugs that are handled by dedicated .tsx files in the pages/ directory
+  // These are the ones causing the conflict.
+  const conflictingSlugs = ['about', 'contact', 'faq'];
+
+  // Map filenames to slugs for dynamic paths, but filter out the conflicting ones
+  const paths = filenames
+    .map((filename) => filename.replace(/\.md$/, '')) // Convert filename to slug
+    .filter((slug) => !conflictingSlugs.includes(slug)) // Filter out slugs that have dedicated .tsx pages
+    .map((slug) => ({
+      params: { slug },
+    })); // Format for getStaticPaths
 
   return { 
     paths, 

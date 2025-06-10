@@ -1,7 +1,8 @@
 ---
 title: Home - SLJ Trading Company
 description: News LJ Trading Company specializes in providing high-quality trading services, including import and export of goods, wholesale trading, and supply chain management solutions.
-layout: page
+layout: Page
+type: page
 ---
 
                                   
