@@ -1,0 +1,48 @@
+name = SLJ Blog Theme
+core = 7.x
+engine = phptemplate
+description = "SLJ Trading Company LLC connects buyers and sellers in global commodities."
+package = Custom
+author = SLJ Trading Company LLC
+
+stylesheets[all][] = css/style.css
+
+regions[header] = Header
+regions[content] = Content
+regions[sidebar_first] = First Sidebar
+regions[sidebar_second] = Second Sidebar
+regions[footer] = Footer
+regions[page_top] = Page Top
+regions[page_bottom] = Page Bottom
+
+features[] = main_menu
+features[] = secondary_menu
+
+; Metadata
+meta[charset] = utf-8
+meta[viewport] = "width=device-width, initial-scale=1"
+meta[description] = "SLJ Trading Company LLC connects buyers and sellers in global commodities like sugar, chicken paws, and minerals. Trust our expertise for reliable sourcing and trade financing."
+meta[keywords] = "SLJ Trading Company, global commodity trading, agro commodities, sugar export, rice export, rare earth metals trading, steel import, iron ore suppliers, international trade company"
+meta[author] = "SLJ Trading Company LLC"
+meta[theme-color] = "#6C8E76"
+meta[robots] = "index, follow"
+meta[property:og:title] = "SLJ Trading Company - Global Commodity Trading Experts"
+meta[property:og:description] = "SLJ Trading Company LLC connects buyers and sellers in global commodities like sugar, chicken paws, and minerals. Trust our expertise for reliable sourcing and trade financing."
+meta[property:og:image] = "https://sljtradingcompany.com/pics/slj-logo.png"
+meta[property:og:url] = "https://sljtradingcompany.com"
+meta[property:og:type] = "website"
+meta[name:language] = "en"
+
+; Assets
+assets[preload][fonts][] = fonts/fa-brands-400.woff2
+assets[preload][fonts][] = fonts/fa-solid-900.woff2
+assets[preload][fonts][] = fonts/mulish-v3-latin-300.woff2
+assets[preload][fonts][] = fonts/mulish-v3-latin-800.woff2
+assets[preload][fonts][] = fonts/roboto-v20-latin-300.woff2
+assets[preload][css][] = css/style.css
+assets[preload][js][] = js/vendors/uikit.min.js
+assets[preload][js][] = js/utilities.min.js
+assets[preload][js][] = js/config-theme.js
+
+favicon = "https://sljtradingcompany.b-cdn.net/pics/slj-favicon.ico"
+apple-touch-icon = "https://sljtradingcompany.b-cdn.net/pics/slj-apple-touch-icon.png"
