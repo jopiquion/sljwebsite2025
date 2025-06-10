@@ -4,19 +4,19 @@ import { GitContentSource } from "@stackbit/cms-git";
 export default defineStackbitConfig({
   stackbitVersion: '~0.7.0', 
   ssgName: 'custom',
-  nodeVersion: '20', // Changed from '18' to '20' for consistency with Netlify
+  nodeVersion: '20', 
 
   contentSources: [
     new GitContentSource({
-      rootPath: './content',
+      rootPath: './content', 
       contentDirs: ['pages', 'products', 'services', 'blog'],
       
-      models: [ // This is the CORRECT place for these models
+      models: [
         {
           name: 'page', 
           type: 'page',
           urlPath: '/{slug}',
-          filePath: 'content/pages/{slug}.md',
+          filePath: 'pages/{slug}.md', // CHANGED: Removed 'content/' prefix
           fields: [
             { name: 'title', type: 'string', required: true, label: 'Page Title' },
             { name: 'description', type: 'text', label: 'Meta Description' },
@@ -28,7 +28,7 @@ export default defineStackbitConfig({
           name: 'product', 
           type: 'page',
           urlPath: '/products/{slug}',
-          filePath: 'content/products/{slug}.md',
+          filePath: 'products/{slug}.md', // CHANGED: Removed 'content/' prefix
           fields: [
             { name: 'title', type: 'string', required: true, label: 'Product Name' },
             { name: 'description', type: 'text', label: 'Product Description' },
@@ -68,7 +68,7 @@ export default defineStackbitConfig({
           name: 'service', 
           type: 'page',
           urlPath: '/services/{slug}',
-          filePath: 'content/services/{slug}.md',
+          filePath: 'services/{slug}.md', // CHANGED: Removed 'content/' prefix
           fields: [
             { name: 'title', type: 'string', required: true, label: 'Service Name' },
             { name: 'description', type: 'text', label: 'Service Description' },
@@ -86,7 +86,7 @@ export default defineStackbitConfig({
           name: 'post', 
           type: 'page',
           urlPath: '/blog/{slug}',
-          filePath: 'content/blog/{slug}.md',
+          filePath: 'blog/{slug}.md', // CHANGED: Removed 'content/' prefix
           fields: [
             { name: 'title', type: 'string', required: true, label: 'Post Title' },
             { name: 'date', type: 'datetime', required: true, label: 'Publish Date' },
@@ -106,8 +106,6 @@ export default defineStackbitConfig({
     })
   ],
   
-  // REMOVED THE DUPLICATE 'models' SECTION FROM HERE
-
   devCommand: 'npm run dev',
   buildCommand: 'npm run build',
   publishDir: './out'
