@@ -41,6 +41,11 @@
 
  
     "@netlify/plugin-visual-editor": "^1.4.1",
+    "@stackbit/cms-git": "^1.0.35",
+    "@stackbit/types": "^2.1.14",
+    "blockit-builder": "^3.2.6",
+    "gray-matter": "^4.0.3",
+    "markdown-it": "^13.0.0"
 
 
 
