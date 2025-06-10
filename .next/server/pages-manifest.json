@@ -3,8 +3,8 @@
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
   "/_error": "pages/_error.js",
-  "/products/[slug]": "pages/products/[slug].js",
   "/blog/[slug]": "pages/blog/[slug].js",
+  "/products/[slug]": "pages/products/[slug].js",
   "/services/[slug]": "pages/services/[slug].js",
   "/[slug]": "pages/[slug].js"
 }
