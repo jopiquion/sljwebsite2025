@@ -1,4 +1,11 @@
-                               Products - SLJ Trading Company { "@context": "https://schema.org", "@type": "Organization", "name": "News LJ Trading Company", "url": "https://newsljtradingcompany.netlify.app/", "logo": "https://newsljtradingcompany.netlify.app/pics/slj-logo.png", "description": "News LJ Trading Company specializes in providing high-quality trading services, including import and export of goods, wholesale trading, and supply chain management solutions. Our mission is to connect businesses with reliable global trading partners.", "contactPoint": { "@type": "ContactPoint", "telephone": "+1-305-939-5154", "contactType": "Customer Service", "areaServed": "US", "availableLanguage": \["English"\] }, "address": { "@type": "PostalAddress", "streetAddress": "848 Brickell Ave, Penthouse 5", "addressLocality": "Miami", "addressRegion": "FL", "postalCode": "33131", "addressCountry": "US" }, "sameAs": \[ "https://facebook.com/yourcompany", "https://instagram.com/yourcompany", "https://linkedin.com/in/yourcompany" \] } body {background-color: white;}
+---
+title: Products - SLJ Trading Company
+description: News LJ Trading Company specializes in providing high-quality trading services, including import and export of goods, wholesale trading, and supply chain management solutions.
+layout: page
+---
+
+                                  
+                                                                 Products - SLJ Trading Company { "@context": "https://schema.org", "@type": "Organization", "name": "News LJ Trading Company", "url": "https://newsljtradingcompany.netlify.app/", "logo": "https://newsljtradingcompany.netlify.app/pics/slj-logo.png", "description": "News LJ Trading Company specializes in providing high-quality trading services, including import and export of goods, wholesale trading, and supply chain management solutions. Our mission is to connect businesses with reliable global trading partners.", "contactPoint": { "@type": "ContactPoint", "telephone": "+1-305-939-5154", "contactType": "Customer Service", "areaServed": "US", "availableLanguage": \["English"\] }, "address": { "@type": "PostalAddress", "streetAddress": "848 Brickell Ave, Penthouse 5", "addressLocality": "Miami", "addressRegion": "FL", "postalCode": "33131", "addressCountry": "US" }, "sameAs": \[ "https://facebook.com/yourcompany", "https://instagram.com/yourcompany", "https://linkedin.com/in/yourcompany" \] } body {background-color: white;}
 
 [![logo](https://sljtradingcompany.b-cdn.net/pics/slj-logo.png)](index.html)
 
